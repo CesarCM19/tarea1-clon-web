@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* 🔝 TOP BAR */
+/* Barra superior */
 .top-bar {
     background: #2b7cd3;
     color: white;
@@ -36,19 +36,9 @@ body {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 50px;
-    background: linear-gradient(to right, #dfe6f5, #ffffff);
+    
 }
-<section class="formulario">
-    <h3>Contáctanos</h3>
-    <form>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Correo">
-        <input type="text" placeholder="Mensaje">
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+
 
 /* TEXTO */
 .hero-text h2 {
@@ -64,14 +54,14 @@ button {
     border: none;
 }
 
-/* PSEUDO SELECTOR (requisito) */
+/* Animación hover btn */
 button:hover {
     background: var(--color-primario);
 }
 
 /* IMAGEN */
 .hero-img img {
-    width: 250px;
+    width: 100%;
 }
 
 /* CARD DERECHA */
@@ -86,3 +76,29 @@ button:hover {
 .hero-card h2 {
     color: var(--color-primario);
 }
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.beneficio img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    font-size: 16px;
+}
+
+
+.beneficio:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
