@@ -1,3 +1,4 @@
+/* Variables de color CSS */
 :root {
     --color-primario: #1428a0;
     --color-secundario: #ffffff;
@@ -7,7 +8,7 @@
 /* RESET */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Barra superior */
@@ -42,7 +43,7 @@ body {
 
 /* TEXTO */
 .hero-text h2 {
-    font-size: 40px;
+    font-weight: 900;
 }
 
 /* BOTÓN */
@@ -71,8 +72,13 @@ button:hover {
     border-radius: 10px;
 }
 
-/* CASCADA */
-/* Este estilo tiene más prioridad que body */
+/* CASCADA Y ESPECIFICIDAD */
+/* 
+Aunque el color podría heredarse desde body, este selector (.hero-card h2)
+tiene mayor especificidad ya que este selector combina una clase (.hero-card) y un elemento (h2),
+lo que aumenta su especificidad frente a un selector simple como h2.
+Por eso este estilo sobrescribe los estilos generales aplicados a todos los h2.
+*/
 .hero-card h2 {
     color: var(--color-primario);
 }
@@ -85,6 +91,7 @@ button:hover {
     background-color: #ffffff;
     text-align: center;
     border-top: 1px solid #ddd;
+    font-weight: 500;
 }
 
 .beneficio img {
